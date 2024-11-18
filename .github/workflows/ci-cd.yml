@@ -24,7 +24,7 @@ jobs:
 
     - name: Build Docker image
       run: |
-        docker buildx build -t ${{ secrets.DOCKER_USERNAME }}/my-app:$GITHUB_SHA ./mywebsite  # Specify the build context directory
+        docker buildx build -t ${{ secrets.DOCKER_USERNAME }}/my-app:$GITHUB_SHA ./dhirajrepo/.github/workflows/mywebsite  # Specify the build context directory
 
     - name: Push Docker image to Docker Hub
       run: |
